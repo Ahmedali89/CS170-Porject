@@ -1,5 +1,5 @@
 # CS170-Porject
-CS170 Project Part II - Ahmed Ali
+CS170 Project Part II 
 
 We used the SAT4J library in this project. It is “the boolean satisfaction and optimisation library in Java.” There is a jar file in the folder and it should work fine if the folder is important into IntelliJ. We decided to use this library because our approach was to create 3sat clauses using the list of wizards as well as the constraints, this allowed us to then use SAT4J  to solve them.
 
