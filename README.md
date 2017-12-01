@@ -26,6 +26,8 @@ The high level idea of our approach is as follows:
 •	If the given clauses is deemed solvable by the solver, we can then process the output by first calling the processing method on the model, which essentially just does the post processing after the Sat4j solver solves all the statements(sat clauses) and gives the orderings. This is done by building a graph of all the wizards in the form of an adjacency list that we built with a hashmap. Each key in the hashmap is a wizard, and the list attached to that key is all the wizards that are older than itself. In other words, processing generates an adjacency list graph that denotes the dependencies, or “smaller than” relationships between all the wizards. For example, the key that has an empty list as the item would be they key that denotes the oldest wizard, and the key that does not appear in the adjacency lists of any other key is the youngest wizard. 
 
 •	This map/graph is then fed into the figuringOrdering method which uses the dependencies from the graph to generate the appropriate ordering out by sorting each key from the graph/map by the size of its adjacency list. 
+
+
 Note:
 Our code could solve up to 180 optimally, but not 200 as a result we made a random ordering for the file from 200-400 and that why we use WriteRandomOrdering to the write those file. 
 
